@@ -9,6 +9,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,6 +20,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 	    public void user_should_navigate_to_login_page(){
 	    	 System.setProperty("webdriver.chrome.driver","D:\\Automation\\chromedriver.exe");
 	 		driver = new ChromeDriver();
+	 		driver.manage().window().maximize();
 	 		driver.get("http://demowebshop.tricentis.com/login");
 	       
 	    }
@@ -40,13 +42,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 	  	     	
 	       
 	    }
-
-	    @And("^I should click on login button$")
+          @And("^I should click on login button$")
 	    public void i_should_click_on_login_button() {
 	    	 WebElement login=driver.findElement(By.xpath("//input[@class='button-1 login-button']"));
 	   	  login.click();
-	   	  driver.close();
-	        
+	  	JavascriptExecutor js=(JavascriptExecutor)driver;
+	   	js.executeScript("window.scrollBy(0,500)");
+	    }
+	    
+          @Then("^user should navigate to Homepage$")
+	    public void user_should_navigate_to_Homepage() {
+	   
+	    	WebElement homeTitle =driver.findElement(By.xpath("//h2[@class='topic-html-content-header']"));
+	 	
+		   	  assertEquals(homeTitle.getText(),"Welcome to our store");
+		   	 driver.close();
 	    }
 
 	}
