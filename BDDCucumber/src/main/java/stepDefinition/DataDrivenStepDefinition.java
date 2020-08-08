@@ -27,9 +27,9 @@ public class DataDrivenStepDefinition {
 	    }
 	   
 	 @And("^I should enter valid password \"([^\"]*)\"$")
-	    public void i_should_enter_valid_password_something(String passw)  {
+	    public void i_should_enter_valid_password_something(String password)  {
 	    	WebElement pass=driver.findElement(By.xpath("//input[@name='password']"));
-		  	  pass.sendKeys(passw);
+		  	  pass.sendKeys(password);
 	    }
 
 	    @Then("^I should click on submit button$")
