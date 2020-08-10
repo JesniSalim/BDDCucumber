@@ -12,7 +12,7 @@ import cucumber.api.java.en.Then;
 public class SimpleDataDrivenStepDefinition {
 	WebDriver driver;
 	@Given("^I should launch application$")
-    public void i_should_launch_application()  {
+    public void i_should_launch_application() {
 		 System.setProperty("webdriver.chrome.driver","D:\\Automation\\chromedriver.exe");
 	 		driver = new ChromeDriver();
 	 		driver.manage().window().maximize();
