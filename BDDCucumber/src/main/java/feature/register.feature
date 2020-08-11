@@ -1,4 +1,4 @@
-Feature:Register
+   Feature:Register
 
 Scenario: verify Register functionality
 

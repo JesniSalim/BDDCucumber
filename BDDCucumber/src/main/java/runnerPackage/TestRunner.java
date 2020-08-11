@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 
 	@RunWith(Cucumber.class)
 	@CucumberOptions(
-			features ="classpath:feature", // to set the feature file [path
+			features ="classpath:feature/DemoRegister.feature", // to set the feature file [path
 			glue = {"stepDefinition"}, // to set step definition path
 			
 	dryRun =false, //checks the mapping between feature and stepdefinitions
