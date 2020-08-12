@@ -1,111 +1,179 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("feature/DemoRegister.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("feature/tagsLogin.feature");
 formatter.feature({
   "line": 1,
-  "name": "Registration",
+  "name": "tags",
   "description": "",
-  "id": "registration",
+  "id": "tags",
   "keyword": "Feature"
 });
-formatter.scenario({
-  "line": 3,
-  "name": "verify Register functionality",
+formatter.background({
+  "line": 2,
+  "name": "",
   "description": "",
-  "id": "registration;verify-register-functionality",
-  "type": "scenario",
-  "keyword": "Scenario"
+  "type": "background",
+  "keyword": "Background"
 });
 formatter.step({
-  "line": 4,
-  "name": "I have to launch application",
+  "line": 3,
+  "name": "Launch the browser",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "TagsLoginStepDefinition.launch_the_browser()"
+});
+formatter.result({
+  "duration": 8193369600,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 13,
+  "name": "verify login with invalid emailid and valid password",
+  "description": "",
+  "id": "tags;verify-login-with-invalid-emailid-and-valid-password",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 12,
+      "name": "@InvalidTest"
+    },
+    {
+      "line": 12,
+      "name": "@FeatureTest"
+    }
+  ]
+});
+formatter.step({
+  "line": 14,
+  "name": "Launch the Home Page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 5,
-  "name": "I should click on Register Menu",
+  "line": 15,
+  "name": "user click on Login button",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 6,
-  "name": "I should select Gender",
-  "keyword": "Then "
+  "line": 16,
+  "name": "user should enter invalid email id and valid password",
+  "keyword": "And "
 });
 formatter.step({
-  "line": 7,
-  "name": "I should enter data",
-  "rows": [
+  "line": 17,
+  "name": "user click on login button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TagsLoginStepDefinition.launch_the_Home_Page()"
+});
+formatter.result({
+  "duration": 3850818799,
+  "status": "passed"
+});
+formatter.match({
+  "location": "TagsLoginStepDefinition.user_click_on_Login_button()"
+});
+formatter.result({
+  "duration": 958300200,
+  "status": "passed"
+});
+formatter.match({
+  "location": "TagsLoginStepDefinition.user_should_enter_invalid_email_id_and_valid_password()"
+});
+formatter.result({
+  "duration": 340064600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "TagsLoginStepDefinition.user_click_on_login_button()"
+});
+formatter.result({
+  "duration": 1228317400,
+  "status": "passed"
+});
+formatter.background({
+  "line": 2,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 3,
+  "name": "Launch the browser",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "TagsLoginStepDefinition.launch_the_browser()"
+});
+formatter.result({
+  "duration": 6188733400,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 27,
+  "name": "verify login with blank emailid and password",
+  "description": "",
+  "id": "tags;verify-login-with-blank-emailid-and-password",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
     {
-      "cells": [
-        "FName",
-        "LName",
-        "Email",
-        "Password",
-        "CPassword"
-      ],
-      "line": 8
+      "line": 26,
+      "name": "@InvalidTest"
     },
     {
-      "cells": [
-        "Jesni",
-        "AS",
-        "jesni123@gmail.com",
-        "jes123",
-        "jes123"
-      ],
-      "line": 9
+      "line": 26,
+      "name": "@FeatureTest"
     }
-  ],
+  ]
+});
+formatter.step({
+  "line": 28,
+  "name": "user should navigate to Home Page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 29,
+  "name": "user should click on Login",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 10,
-  "name": "I should click on Register button",
-  "keyword": "Then "
+  "line": 30,
+  "name": "user should enter blank email id and blank password",
+  "keyword": "And "
 });
 formatter.step({
-  "line": 11,
-  "name": "I should close browser",
+  "line": 31,
+  "name": "click on login",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "DemoRegisterStepDefinition.i_have_to_launch_application()"
+  "location": "TagsLoginStepDefinition.user_should_navigate_to_login_Page()"
 });
 formatter.result({
-  "duration": 45845761400,
+  "duration": 3435540500,
   "status": "passed"
 });
 formatter.match({
-  "location": "DemoRegisterStepDefinition.i_should_click_on_Register_Menu()"
+  "location": "TagsLoginStepDefinition.user_should_click_on_Login()"
 });
 formatter.result({
-  "duration": 3974527600,
+  "duration": 827814401,
   "status": "passed"
 });
 formatter.match({
-  "location": "DemoRegisterStepDefinition.i_should_select_Gender()"
+  "location": "TagsLoginStepDefinition.user_should_enter_blank_email_id_and_blank_password()"
 });
 formatter.result({
-  "duration": 280310200,
+  "duration": 181743501,
   "status": "passed"
 });
 formatter.match({
-  "location": "DemoRegisterStepDefinition.i_should_enter_data(DataTable)"
+  "location": "TagsLoginStepDefinition.click_on_login_()"
 });
 formatter.result({
-  "duration": 1996478200,
-  "status": "passed"
-});
-formatter.match({
-  "location": "DemoRegisterStepDefinition.i_should_click_on_Register_button()"
-});
-formatter.result({
-  "duration": 1512674200,
-  "status": "passed"
-});
-formatter.match({
-  "location": "DemoRegisterStepDefinition.i_should_close_browser()"
-});
-formatter.result({
-  "duration": 952008200,
+  "duration": 2698017499,
   "status": "passed"
 });
 });
