@@ -16,7 +16,8 @@ import cucumber.api.junit.Cucumber;
 	//tags= {"@SmokeTest"},
 	//tags= {"@SmokeTest,@InvalidTest"},
 	//tags= {"@SmokeTest,@FeatureTest"},
-	tags= {"@InvalidTest","@FeatureTest"},
+	//tags= {"@InvalidTest","@FeatureTest"},
+	tags= {"~@SmokeTest"},
 	monochrome = true, // to make readable output in console
 	format = {"pretty","html:test-outout"})
 	public class TestRunner {
